@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Categoría Uno">
+        <CheckBoxPreference
+            android:id="@+id/CHKopcion1"
+            android:key="opcion1"
+            android:summary="Si quieres activar que Sam la toque otra vez."
+            android:title="Tocala otra vez Sam" />
+
+        <CheckBoxPreference
+            android:id="@+id/CHKopcion2"
+            android:key="pipooo"
+            android:summary="Si crees que Pipo merecía vivir no dudes en pulsar el botón. Todos somos Pipo si así lo queremos."
+            android:title="Pipo es un buen perro?" />
+
+        <EditTextPreference
+            android:id="@+id/EDopcion2"
+            android:dialogTitle="Indica el color"
+            android:key="opcion2"
+            android:summary="Escribe algo que te guste"
+            android:title="Que escribiré?" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Categoría Dos">
+        <ListPreference
+            android:dialogTitle="Elegir color"
+            android:entries="@array/colores"
+            android:entryValues="@array/codigocolores"
+            android:key="opcion 3"
+            android:summary="En el mundo puede que tengamos demasiados colores."
+            android:title="Que color te gusta menos?"></ListPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
