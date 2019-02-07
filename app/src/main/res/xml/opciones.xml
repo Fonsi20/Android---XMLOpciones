@@ -26,7 +26,7 @@
             android:dialogTitle="Elegir color"
             android:entries="@array/colores"
             android:entryValues="@array/codigocolores"
-            android:key="opcion 3"
+            android:key="opcion3"
             android:summary="En el mundo puede que tengamos demasiados colores."
             android:title="Que color te gusta menos?"></ListPreference>
     </PreferenceCategory>

@@ -6,6 +6,7 @@
         <item>Verde</item>
         <item>Rojo</item>
     </string-array>
+
     <string-array name="codigocolores">
         <item>1</item>
         <item>2</item>

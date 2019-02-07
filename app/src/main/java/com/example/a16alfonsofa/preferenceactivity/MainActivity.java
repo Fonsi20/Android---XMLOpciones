@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnSave,btnopciones;
+    private Button btnSave,btnopciones,btnsaber;
     private RadioButton rbAzul, rbRojo;
     private TextView lblT;
     private String color = "Negro";
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnSave = (Button) findViewById(R.id.BTNSave);
         btnopciones = (Button) findViewById(R.id.BTNOpciones);
+        btnsaber = (Button) findViewById(R.id.BTNSaberCosas);
         rbAzul = (RadioButton) findViewById(R.id.rbAzul);
         rbRojo = (RadioButton) findViewById(R.id.rbRojo);
         lblT = (TextView) findViewById(R.id.lblTexto);
@@ -74,6 +76,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Opciones.class);
                 startActivity(i);
+            }
+        });
+
+        btnsaber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+
+                Log.i("Preferencias","opcion1: "+ pref.getBoolean("opcion1",false));
+                Log.i("Preferencias","Pipo: "+ pref.getBoolean("pipooo",false));
+                Log.i("Preferencias","Escribir: "+ pref.getString("opcion2",""));
+                Log.i("Preferencias","Lista: "+ pref.getString("opcion3",""));
             }
         });
     }
